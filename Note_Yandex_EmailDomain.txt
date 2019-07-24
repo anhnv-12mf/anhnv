@@ -1,21 +1,22 @@
 /********** step by step create email domain in yandex **************/
+
 1 - Xác minh chủ sở hữu tên miền
-		Login vào tài khoản yandex > https://connect.yandex.com/ > Vào trình quản trị tên miền > Thêm DNS (Thêm bản ghi) 
-		> Tên bản ghi: @; Loại: TXT; Giá trị: lấy chuỗi từ Yandex > Chờ 2-3' > Start verification		
-      
-      -> Thành Công sẽ báo Domain confirmed
+	Login vào tài khoản yandex > https://connect.yandex.com/ > Vào trình quản trị tên miền > Thêm DNS (Thêm bản ghi) 
+	> Tên bản ghi: @; Loại: TXT; Giá trị: lấy chuỗi từ Yandex > Chờ 2-3' > Start verification		
+      	
+	-> Thành Công sẽ báo Domain confirmed
 
 2 - Cập nhật DNS
-		Tên bản ghi		Loại bản ghi		Giá trị bản ghi								Ưu tiên
-		@				TXT					mx.yandex.net.								10
-		mail		CNAME			domain.mail.yandex.net.	
-		@				TXT					v=spf1 redirect=_spf.yandex.net
-			
-      -> Chú ý: giá trị bản ghi lấy theo trong "DNS management"
+	Tên bản ghi		Loại bản ghi		Giá trị bản ghi				Ưu tiên
+	@			TXT			mx.yandex.net.				10
+	mail			CNAME			domain.mail.yandex.net.	
+	@			TXT			v=spf1 redirect=_spf.yandex.net				
+		
+	-> Chú ý: giá trị bản ghi lấy theo trong "DNS management"
 	
 3 - Xác nhận DKIM
-		Tên bản ghi		    Loại bản ghi		Giá trị bản ghi								Ưu tiên
-		mail._domainkey	  Lấy giá trị 
-						          theo video
+		Tên bản ghi		Loại bản ghi		Giá trị bản ghi				Ưu tiên
+		mail._domainkey	  	Lấy giá trị 
+					theo video
 					
 /********** end step by step create email domain in yandex **************/					
